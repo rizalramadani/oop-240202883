@@ -2,72 +2,92 @@
 Topik: [Tuliskan judul topik, misalnya "Class dan Object"]
 
 ## Identitas
-- Nama  : [Nama Mahasiswa]
-- NIM   : [NIM Mahasiswa]
-- Kelas : [Kelas]
+- Nama  : [Rizal Ramadani]
+- NIM   : [240202883]
+- Kelas : [3IKRB]
 
 ---
 
 ## Tujuan
-(Tuliskan tujuan praktikum minggu ini.  
-Contoh: *Mahasiswa memahami konsep class dan object serta dapat membuat class Produk dengan enkapsulasi.*)
+(
+1. Mahasiswa mampu menjelaskan dan mengimplementasikan konsep class, object, atribut, dan method.
+
+2. Mahasiswa mampu menerapkan enkapsulasi menggunakan access modifier private serta getter dan setter.
+
+3. Mahasiswa mampu melakukan instansiasi objek dan menampilkan data produk pertanian pada console.
+
+4. Mahasiswa mampu mengelola repositori kode menggunakan Git dan GitHub*)
 
 ---
 
 ## Dasar Teori
-(Tuliskan ringkasan teori singkat (3–5 poin) yang mendasari praktikum.  
-Contoh:  
-1. Class adalah blueprint dari objek.  
-2. Object adalah instansiasi dari class.  
-3. Enkapsulasi digunakan untuk menyembunyikan data.)
+(
+1. Class: Merupakan cetak biru (blueprint) yang mendefinisikan atribut dan perilaku (method) dari suatu entitas.
+
+2. Object: Bentuk nyata (instansiasi) dari sebuah class yang menempati memori.
+
+3. Enkapsulasi: Mekanisme menyembunyikan data sensitif menggunakan modifier private agar hanya bisa diakses melalui method public (getter dan setter).
+
+4. Access Modifier: Pengaturan hak akses (seperti public dan private) untuk menjaga integritas data di dalam class.)
 
 ---
 
 ## Langkah Praktikum
-(Tuliskan Langkah-langkah dalam prakrikum, contoh:
-1. Langkah-langkah yang dilakukan (setup, coding, run).  
-2. File/kode yang dibuat.  
-3. Commit message yang digunakan.)
+(
+1. Persiapan Folder: Mengatur struktur package sesuai standar yaitu com.upb.agripos.model dan com.upb.agripos.util.
+
+2. Coding Class Model: Membuat file Produk.java yang memiliki atribut privat (kode, nama, harga, stok) dan method pengelola stok.
+
+3.  Coding Class Utility: Membuat file CreditBy.java dengan method statis untuk menampilkan identitas di akhir program.
+
+4. Main Program: Membuat MainProduk.java untuk membuat 3 objek (Benih, Pupuk, dan Cangkul) serta menampilkan datanya.
+
+5. Version Control: Melakukan git add ., git commit -m "week2-class-object", dan git push ke GitHub.)
 
 ---
 
 ## Kode Program
 (Tuliskan kode utama yang dibuat, contoh:  
 
-```java
-// Contoh
-Produk p1 = new Produk("BNH-001", "Benih Padi", 25000, 100);
-System.out.println(p1.getNama());
-```
+// Contoh Instansiasi di MainProduk.java
+Produk p1 = new Produk("BNH-001", "Benih Padi IR64", 25000, 100);
+Produk p2 = new Produk("PPK-101", "Pupuk Urea 50kg", 350000, 40);
+
+// Menampilkan data menggunakan Getter
+System.out.println("Kode: " + p1.getKode() + ", Nama: " + p1.getNama());
+
+// Memanggil CreditBy
+CreditBy.print("240202883", "Rizal Ramadani");
 )
 ---
 
 ## Hasil Eksekusi
 (Sertakan screenshot hasil eksekusi program.  
-![Screenshot hasil](screenshots/hasil.png)
+![Screenshot hasil](screenshots/Screenshot%202026-01-14%20165827.png)
 )
 ---
 
 ## Analisis
 (
-- Jelaskan bagaimana kode berjalan.  
-- Apa perbedaan pendekatan minggu ini dibanding minggu sebelumnya.  
-- Kendala yang dihadapi dan cara mengatasinya.  
+- Alur Kerja: Kode berjalan dengan mengawali pembuatan objek melalui constructor. Data yang diinputkan disimpan ke dalam atribut privat, lalu diambil kembali menggunakan getter untuk ditampilkan ke layar.
+
+- Perbedaan: Jika minggu sebelumnya kode mungkin ditulis secara prosedural dalam satu file, minggu ini kode dipisah menjadi beberapa class (modular), sehingga lebih teratur dan mudah dikelola.
+
+- Kendala: Terdapat kendala pada embedded git repository saat melakukan push, namun berhasil diatasi dengan menghapus folder .git di dalam subfolder dan melakukan force push untuk membersihkan indeks.  
 )
 ---
 
 ## Kesimpulan
-(Tuliskan kesimpulan dari praktikum minggu ini.  
-Contoh: *Dengan menggunakan class dan object, program menjadi lebih terstruktur dan mudah dikembangkan.*)
+(Penggunaan konsep Class dan Object memungkinkan representasi dunia nyata (seperti produk pertanian) ke dalam program secara terstruktur. Dengan enkapsulasi, keamanan data lebih terjamin karena akses variabel dikontrol secara ketat melalui method.*)
 
 ---
 
 ## Quiz
-(1. [Tuliskan kembali pertanyaan 1 dari panduan]  
-   **Jawaban:** …  
+(1. [Mengapa atribut sebaiknya dideklarasikan sebagai private dalam class?]  
+   **Untuk menerapkan prinsip enkapsulasi, sehingga data tidak dapat diubah secara sembarangan dari luar class yang dapat menyebabkan error atau ketidakkonsistenan data:** …  
 
-2. [Tuliskan kembali pertanyaan 2 dari panduan]  
-   **Jawaban:** …  
+2. [Apa fungsi getter dan setter dalam enkapsulasi?]  
+   **Getter berfungsi untuk mengambil atau membaca nilai dari atribut privat, sedangkan Setter berfungsi untuk mengisi atau mengubah nilai atribut tersebut dengan validasi tertentu.:** …  
 
-3. [Tuliskan kembali pertanyaan 3 dari panduan]  
-   **Jawaban:** …  )
+3. [Bagaimana cara class Produk mendukung pengembangan aplikasi POS yang lebih kompleks?]  
+   **Class Produk menjadi fondasi untuk fitur lain seperti transaksi penjualan, manajemen inventaris, dan laporan keuangan, karena data produk sudah terorganisir dalam satu modul yang bisa dipanggil berulang kali.:** …  )

@@ -8,7 +8,7 @@ import com.upb.agripos.view.ConsoleView;
 public class AppMVC {
     public static void main(String[] args) {
         System.out.println("Agri-POS System Week 10");
-        System.out.println("Developed by: [Nama Anda] - [NIM Anda]\n");
+        System.out.println("Developed by: [Rizal Ramadani] - [240202883]\n");
 
         // 1. Uji Singleton
         try {

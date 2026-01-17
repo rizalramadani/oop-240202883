@@ -81,7 +81,7 @@ public class HelloProcedural {
 
 ## Hasil Eksekusi
 (Sertakan screenshot hasil eksekusi program.  
-![Screenshot hasil](screenshots/hasil.png)
+![Screenshot hasil](screenshots/hello.functional.png)
 )
 ---
 
